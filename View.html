@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot Du Lịch</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f7f7f7; }
+        #chatbox { width: 500px; margin: 40px auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px #ccc; padding: 20px; }
+        #messages { height: 300px; overflow-y: auto; border: 1px solid #eee; padding: 10px; margin-bottom: 10px; background: #fafafa; }
+        .user { color: #007bff; font-weight: bold; }
+        .bot { color: #28a745; font-weight: bold; }
+        #input { width: 80%; padding: 8px; }
+        #send { padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <div id="chatbox">
+        <h2>Chatbot Du Lịch</h2>
+        <div id="messages"></div>
+        <input type="text" id="input" placeholder="Nhập câu hỏi về tour du lịch..." />
+        <button id="send">Gửi</button>
+    </div>
+    <script>
+        const messages = document.getElementById('messages');
+        const input = document.getElementById('input');
+        const send = document.getElementById('send');
+
+        function appendMessage(sender, text) {
+            const div = document.createElement('div');
+            div.innerHTML = `<span class="${sender}">${sender === 'user' ? 'Bạn' : 'Bot'}:</span> ${text}`;
+            messages.appendChild(div);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        send.onclick = async function() {
+            const query = input.value.trim();
+            if (!query) return;
+            appendMessage('user', query);
+            input.value = '';
+            appendMessage('bot', 'Đang xử lý...');
+
+            // Gọi API Django
+            try {
+                const res = await fetch(`/chat/?query=${encodeURIComponent(query)}`);
+                const data = await res.json();
+                messages.lastChild.remove(); // Xóa "Đang xử lý..."
+                appendMessage('bot', data.answer);
+            } catch (e) {
+                messages.lastChild.remove();
+                appendMessage('bot', 'Có lỗi xảy ra, vui lòng thử lại.');
+            }
+        };
+
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') send.click();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[project]
+name = "rag-travel-tour"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "xdTruongThanhPhat",email = "hoang_2151220244@dau.edu.vn"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pandas (>=2.3.3,<3.0.0)",
+    "sentence-transformers (>=5.1.1,<6.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
