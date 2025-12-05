@@ -4,7 +4,6 @@ from utils.mongo import mongodb_client
 import re
 import time
 from datetime import datetime
-import ollama  # ✅ THÊM: Import thư viện để tạo embedding
 
 genai.configure(api_key=settings.GEMINI_API_KEY)
 
@@ -187,11 +186,16 @@ class RAGService:
     # ✅ MỚI: Hàm tạo Embedding sử dụng Ollama (Thay thế extract_keywords)
     def get_query_embedding(self, text):
         try:
-            # Lưu ý: Model này PHẢI khớp với model bạn dùng trong file JS (nomic-embed-text)
-            response = ollama.embeddings(model='nomic-embed-text', prompt=text)
-            return response['embedding']
+            # Dùng model embedding của Gemini (nhẹ và free)
+            # task_type="retrieval_query" tối ưu cho việc tìm kiếm
+            result = genai.embed_content(
+                model="models/text-embedding-004",
+                content=text,
+                task_type="retrieval_query"
+            )
+            return result['embedding']
         except Exception as e:
-            print(f"❌ Error generating embedding with Ollama: {e}")
+            print(f"❌ Error generating embedding with Gemini: {e}")
             return []
 
     # ✅ SỬA ĐỔI CHÍNH: Thay Regex bằng Vector Search
