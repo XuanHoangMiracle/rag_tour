@@ -1,0 +1,4 @@
+# Tạo file .gitignore (nếu chưa có) và thêm .env vào đó
+Add-Content .gitignore ".env"
+Add-Content .gitignore "__pycache__/"
+Add-Content .gitignore "*.pyc"
