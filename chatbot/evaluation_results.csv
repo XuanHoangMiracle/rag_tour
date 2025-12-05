@@ -1,0 +1,104 @@
+﻿id,type,question,ground_truth,chatbot_answer,bleu,rouge_l,similarity,latency
+1,fact,Tour Nha Trang 3N2Đ giá bao nhiêu?,"Tour Nha Trang 3N2Đ khám phá biển đảo có giá khoảng 3,990,000 VNĐ,với dịch vụ Khách sạn 4*,Ăn sáng buffet,Di chuyển xe,Lịch trình du lịch Ngày 1: Đón khách – Nhận phòng. Ngày 2: Tham quan Vinpearl.","Chào bạn, Tour Nha Trang 3N2Đ có giá 3.990.000 VNĐ nhé.",0.0262,0.2973,0.6405,3.36
+2,suggestion,Tôi muốn đi du lịch Đà Nẵng 4 ngày,"Bên mình có Tour Đà Nẵng 4N2Đ rất phù hợp với nhu cầu của bạn. Bạn sẽ được tham quan Cầu Rồng, Bà Nà Hills và phố cổ Hội An.","Chào bạn, hiện tại bên mình chưa có tour Đà Nẵng nào. Bên mình đang có các tour Nha Trang 3N2Đ khám phá biển đảo với giá 3.990.000 VNĐ, bao gồm khách sạn 4*, ăn sáng buffet và xe du lịch. Bạn có muốn tìm hiểu thêm về tour Nha Trang không ạ?",0.0123,0.2975,0.7196,4.34
+3,fact,Tour Huế đi mấy ngày?,"Hiện tại bên mình có Tour Huế kéo dài 5N4Đ với dịch vụ Khách sạn 4*,Ăn sáng buffet,Di chuyển xe du lịch.","Chào anh/chị, hiện tại bên em chưa có tour đi Huế ạ. Bên em đang có các tour Nha Trang 3N2Đ khám phá biển đảo, anh/chị có muốn tham khảo không ạ?",0.0147,0.321,0.5046,5.63
+4,fact,Có tour nào đi Bà Nà Hills trong ngày không?,"Có ạ, bạn có thể tham khảo Tour Du lịch Bà Nà Hills 1N1Đ, trải nghiệm leo núi.","Chào anh/chị, hiện tại bên em chưa có tour đi Bà Nà Hills trong ngày ạ. Các tour hiện có của bên em là tour khám phá biển đảo Nha Trang 3N2Đ.",0.031,0.2687,0.6937,3.81
+5,suggestion,Tư vấn tour đi Nghệ An,Bạn có thể chọn Tour du lịch Nghệ An 6N5Đ để khám phá quê Bác với giá 2000000.,"Chào bạn, hiện tại có tour Du lịch Nghệ An 6N5Đ với giá 2.000.000 VNĐ/người. Tour đã bao gồm vé máy bay và free Wifi nhé.",0.1156,0.4333,0.5573,3.03
+6,suggestion,Động Phong Nha đi tour nào?,"Chào bạn bên mình đang có 3 tour du lịch phong nha Khám Phá Phong Nha Kẻ Bàng - Thiên Đường Động , Khám Phá Hang Động Phong Nha - Kỳ Quan Thiên Nhiên 3N2Đ và Du lịch ĐỘng phong nha 3N2Đ.","Chào bạn, hiện tại bên mình chưa có tour nào đi Động Phong Nha. Các tour hiện có là tour Nha Trang 3N2Đ khám phá biển đảo nhé.",0.0149,0.3956,0.6688,4.81
+7,fact,Giá tour Hà Giang 5N4Đ là bao nhiêu?,"Hiện tại Tour du lịch Hà Giang 5N4Đ hiện đang có mức giá ưu đãi la 2500000, với lịch trình Ngày 1: Hà Nội - Hà Giang | Ngày 2: Yên Minh - Đồng Văn | Ngày 3: Mã Pì Lèng - Mèo Vạc | Ngày 4: Về Hà Giang - Hà Nội.","Hiện tại, chúng tôi chưa có tour Hà Giang 5N4Đ bạn nhé. Bạn có muốn tham khảo các tour đến Huế hoặc Đà Nẵng không?",0.0139,0.2941,0.5632,3.55
+8,suggestion,Tôi thích câu cá ở Phú Quốc,"Mình có 2 tour Phú Quốc có hoạt động câu cá nè:Tour 1: Du lịch Phú Quốc 3N2Đ Câu cá (1,500,000 VNĐ/người)Tour 2: Tour Câu mực đêm Phú Quốc (5,000,000 VNĐ/người) Bạn thích tour nào hơn ạ?","Chào bạn, có tour Du lịch Phú Quốc 3N2Đ Câu cá rất phù hợp với sở thích của bạn. Tour này có hoạt động câu cá ở Phú Quốc đó.",0.2746,0.3883,0.7916,4.14
+9,fact,Có tour nào đi Thái Bình không?,"Dạ có tour Thái Bình 3N2Đ ạ, giá là 2,500,000 VNĐ/người. Bạn có muốn tìm hiểu thêm không ạ?","Dạ có tour Thái Bình 3N2Đ đó ạ. Tour này có giá 2.500.000 VNĐ cho 1 người, bao gồm Máy bay và Oto.",0.218,0.5862,0.7787,2.5
+10,complex,Gợi ý tour miền Trung 5 ngày,"Với lịch trình 5 ngày tại miền Trung, bạn có thể chọn Mình có tour du lịch Hang Sơn Đoòng 5N4Đ ở Quảng Bình, khám phá hang động kỳ vĩ nhất thế giới. Giá là 72,000,000 VNĐ/người. Bạn có thể nói thêm chi tiết yêu cầu nào nữa không ạ?","Chào bạn, hiện tại mình chưa có tour miền Trung 5 ngày. Mình có các tour Nha Trang 3N2Đ khám phá biển đảo rất hấp dẫn, bạn tham khảo nhé:
+
+*   **Tour Nha Trang 3N2Đ khám phá biển đảo**: Giá 3.990.000 VNĐ, bao gồm khách sạn 4*, ăn sáng buffet, di chuyển xe du lịch. Lịch trình tham quan Vinpearl, mua sắm...
+
+Bạn có muốn tìm hiểu thêm về tour Nha Trang này không?",0.0123,0.3191,0.6617,2.69
+11,suggestion,Tour liên tuyến Huế Hội An Đà Nẵng,"Bên mình có Tour du lịch Mình có tour du lịch liên tuyến Huế-Hội An-Đà Nẵng ạ. Giá là 1,000,000 VNĐ/người.","Chào bạn, hiện tại bên mình chưa có tour liên tuyến Huế - Hội An - Đà Nẵng ạ. Bên mình có các tour riêng biệt đến Đà Nẵng và Huế, bạn có muốn tham khảo không?",0.041,0.4138,0.7694,6.31
+12,suggestion,Tôi muốn đi Côn Đảo,"Mình có tour Côn Đảo 3N2Đ - Hòn đảo Thiên Đường, giá là 9,800,000 VNĐ/người.","Chào bạn, hiện tại bên mình chưa có tour đi Côn Đảo ạ. Bạn có muốn tham khảo các tour Nha Trang 3N2Đ khám phá biển đảo không?",0.0222,0.3438,0.6141,3.4
+13,suggestion,Tour thám hiểm hang động,"Nếu bạn thích thám hiểm, đừng bỏ qua Tour du lịch đồng Tú Làn hoặc Tour du lịch Mình có tour Khám Phá Hang Động Phong Nha ở Quảng Bình 3N2Đ,với giá 6,500,000 VNĐ/ngườ","Mình có tour du lịch Động Phong Nha 3N2Đ ở Quảng Bình, có hoạt động leo núi khám phá hang động đó ạ. Bạn có muốn tìm hiểu thêm không?
+",0.0572,0.3297,0.7299,9.06
+14,suggestion,Mùa hoa tam giác mạch đi đâu?,"Vậy bạn có muốn tham khảo tour Đà Nẵng 5N4Đ không? Giá là 2,000,000 VNĐ/người. Ở Đà Nẵng có biển Mỹ Khê rất đẹp đó ạ.",Bạn có thể tham khảo tour **Du lịch ngắm hoa** ở **Hà Giang** nhé. Hà Giang nổi tiếng với mùa hoa tam giác mạch rất đẹp đấy.,0.0455,0.4507,0.3367,2.98
+15,suggestion,Du lịch lặn biển ở đâu đẹp?,Bạn có thể chọn Tour du lịch lặn biển tại Nha Trang hoặc Phú Quốc để ngắm san hô tuyệt đẹp.,"Chào bạn, Nha Trang là một địa điểm rất đẹp để lặn biển đó.
+
+Bên mình có các tour Nha Trang 3N2Đ khám phá biển đảo với giá 3,990,000 VNĐ, bao gồm khách sạn 4*, ăn sáng buffet và di chuyển bằng xe du lịch. Bạn có muốn tham khảo thêm chi tiết tour này không?",0.0128,0.2301,0.7037,4.33
+16,fact,Đà Lạt 3 ngày 2 đêm có gì?,"Mình có 2 tour Đà Lạt 3 ngày 2 đêm nè: Tour 1: Du lịch Đà Lạt Thành Phố Ngàn Hoa (4,500,000 VNĐ/người) Tour 2: Đà Lạt 3N2Đ - Thành Phố Ngàn Hoa (5,500,000 VNĐ/người) Bạn muốn tìm hiểu về tour nào ạ?","Chào bạn, hiện tại bên mình chưa có tour Đà Lạt 3 ngày 2 đêm ạ. Bạn có muốn tham khảo các tour Nha Trang 3 ngày 2 đêm khám phá biển đảo không?",0.1455,0.3273,0.7314,3.62
+17,fact,Tour Vịnh Hạ Long bao nhiêu ngày?,"Xin lỗi, mình không có tour Vịnh Hạ Long. Thay vào đó, mình có tour Nha Trang 3N2Đ khám phá biển đảo, giá 3,990,000 VNĐ. Bạn có muốn tìm hiểu thêm không ạ?","Chào bạn, hiện tại mình chưa có thông tin về tour Vịnh Hạ Long.
+
+Bên mình đang có các tour Nha Trang 3 ngày 2 đêm khám phá biển đảo với giá 3,990,000 VNĐ. Bạn có muốn tìm hiểu thêm về tour Nha Trang không ạ?",0.2978,0.6783,0.9012,4.66
+18,suggestion,Leo núi Fansipan,Mời bạn tham khảo Tour Trekking Fansipan 3N2Đ hoặc Chinh Phục Đỉnh Fansipan 4N3Đ để chạm tay vào Nóc nhà Đông Dương.,Tour Sapa - Nóc nhà Đông Dương ở Lào Cai có chinh phục đỉnh Fansipan bằng cáp treo 3 dây vào ngày thứ 2 đó ạ.,0.0428,0.3607,0.6379,2.62
+19,suggestion,Tôi muốn đi Hà Giang,Bên mình có Tour Hà Giang Loop 5N4Đ hoặc Hà Giang Loop - Chinh Phục Đỉnh Mã Pì Lèng dành cho các bạn trẻ thích trải nghiệm phượt.,"Chào bạn, bạn có thể tham khảo tour Du lịch Hà Giang 5N4Đ nhé.
+
+Tour này kéo dài 5 ngày 4 đêm, giá 2.500.000 VNĐ cho 1 người. Bạn sẽ được trải nghiệm leo núi và di chuyển bằng ô tô. Lịch trình ngày 1 là đi leo núi, ngày 2 đi săn mây đó ạ.",0.012,0.2906,0.607,2.7
+20,fact,Tôi muốn đi Ninh Bình với chi phí 5tr cho 2 người,"Tour Ninh Bình 2N1Đ bên mình có giá 4,200,000 VNĐ/người. Nếu đi 2 người thì tổng chi phí là 8,400,000 VNĐ, hơi vượt quá ngân sách của bạn một chút ạ. Bạn có muốn mình tư vấn thêm không ạ?","Chào bạn, hiện tại bên mình chưa có tour đi Ninh Bình ạ. Bạn có muốn tham khảo các tour đến Quảng Bình, Đà Nẵng hay Thái Bình không?",0.0788,0.3486,0.4057,7.6
+21,complex,Tôi muốn đi quảng bình đến đồi mây đắng,"Mình có tour du lịch Đồi Mây Đắng ở Quảng Bình 2N1Đ, giá là 500,000 VNĐ/người..","Chào bạn, hiện tại bên mình có tour Du lịch Động Phong Nha 3N2Đ tại **Quảng Bình**.
+
+Tour này có hoạt động leo núi, nhưng không đề cập cụ thể đến ""đồi mây đắng"" bạn nhé. Bạn có thể cho mình biết thêm thông tin về ""đồi mây đắng"" để mình kiểm tra kỹ hơn không?",0.0076,0.2857,0.646,4.17
+22,fact,Tôi muốn đi Quy Nhơn,"Mình có tour Quy Nhơn 3N2Đ - Thiên Đường Bình Định, giá là 5,200,000 VNĐ/người.","Chào bạn, có tour Quy Nhơn 3N2Đ - Thiên Đường Bình Định đây nhé:
+
+*   **Địa điểm:** Quy Nhơn, Bình Định
+*   **Thời gian:** 3 ngày 2 đêm
+*   **Giá:** 5.200.000 VNĐ
+*   **Số người:** 18 người
+*   **Bao gồm:** Wifi miễn phí, vé máy bay, bữa sáng.
+
+Bạn cần thêm thông tin chi tiết về lịch trình tour Quy Nhơn không?",0.1226,0.3585,0.5451,2.36
+23,suggestion,Nên đi đâu để ngắm mùa hoa sim,Mình không có thông tin về tour ngắm mùa hoa sim. Thay vào đó bạn hãy tìm tour nào đó ở Đà Lạt hoặc Mộc Châu để tận hưởng không khí trong lành và cảnh đẹp thiên nhiên nhé!,"Chào bạn, để ngắm mùa hoa sim, bạn có thể tham khảo tour Du lịch Đồi Sim ở Cao Bằng nhé.",0.0245,0.3171,0.6781,3.05
+24,suggestion,Du lịch biển miền Bắc,Bạn có thể tham khảo Tour Cát Bà 3N2Đ - Khám Phá Vịnh Lan Hạ hoặc Tour Hạ Long.Bạn có thể nói chi tiết hơn về sở thích của bạn để mình tư vấn chính xác hơn không ạ?,"Chào bạn, hiện tại bên mình chưa có tour du lịch biển miền Bắc ạ.
+
+Mình có các tour du lịch biển Nha Trang 3N2Đ khám phá biển đảo với giá 3,990,000 VNĐ. Tour bao gồm khách sạn 4*, ăn sáng buffet và di chuyển bằng xe du lịch. Bạn có muốn tìm hiểu thêm về tour Nha Trang không ạ?",0.0109,0.2973,0.6054,4.32
+25,suggestion,Tôi muốn đi miền Tây sông nước,"Mình có 3 tour miền Tây sông nước nè:Tour 1: Cần Thơ - Vĩnh Long 2N1Đ (3,800,000 VNĐ/người) Tour 2: Trải Nghiệm Đồng Bằng Sông Cửu Long - Chợ Nổi Cái Răng (2,900,000 VNĐ/người) Tour 3: Trà Viên - Sóc Trăng 2N1Đ (3,600,000 VNĐ/người).","Chào bạn, hiện tại mình chưa có tour đi miền Tây sông nước trong danh sách. Mình có các tour tới Đà Nẵng và Sapa, bạn có muốn tìm hiểu không?",0.061,0.3443,0.4886,4.84
+26,complex,Phú Yên có gì đẹp?,"Mình có tour Phú Yên 3N2Đ - Vịnh Xuân Đại Tuyệt Đẹp, giá là 5,400,000 VNĐ/người. Tour này có những điểm đến như Bãi Tịnh Khê, Gành Đá Dĩa, Đèo Cả, Vĩnh Xuân Đại,...","Hiện tại, mình chưa có thông tin tour du lịch đến Phú Yên. Bạn có muốn tham khảo các tour đến **Đà Nẵng**, **Phú Quốc** hay **Sapa** không ạ?",0.0081,0.3077,0.4196,4.06
+27,suggestion,Tour nghỉ dưỡng gần Đà Nẵng,"Mình muốn giới thiệu cho bạn tour du lịch Tour Huế 5N4Đ rất gần Đà Nẵng chỉ cách nhau 100km, với giá 5,000,000 VNĐ/người.","Chào bạn, hiện tại bên mình có **Tour Đà Nẵng 4N2Đ** tại Đà Nẵng với khách sạn 4 sao và ăn sáng buffet, rất phù hợp cho chuyến nghỉ dưỡng đó ạ.",0.0155,0.2651,0.6146,4.69
+28,fact,Tam Đảo đi mấy ngày?,Mình không có tour Tam Đảo bạn ạ.Nếu bạn muốn đi biển đảo tour du lịch Côn Đảo 3N2Đ hoặc Tour Phú Quốc 3N2Đ sẽ rất phù hợp đó ạ.,"Chào anh/chị, hiện tại bên em chưa có tour Tam Đảo ạ. Bên em đang có các tour Nha Trang 3N2Đ khám phá biển đảo với giá 3,990,000 VNĐ, khách sạn 4* đó ạ. Anh/chị có muốn tham khảo không ạ?",0.0838,0.268,0.7085,4.62
+29,suggestion,Tôi muốn đi nha trang 5N4Đ với chi phí thấp,Rất tiếc mình không có tour Nha Trang nào 5N4Đ cả nhưng bên mình có Tour Nha Trang 3N2Đ khám phá biển đảo và Tour Nha Trang 3N2Đ khám phá biển đảo,"Chào bạn, hiện tại bên mình chưa có tour Nha Trang 5N4Đ. Bên mình có các tour Nha Trang 3N2Đ với giá 3.990.000 VNĐ. Bạn tham khảo nhé!",0.1276,0.4598,0.728,5.19
+30,fact,Thác Bản Giốc ở đâu?,Thác Bản Giốc thuộc tỉnh Cao Bằng. Bạn có thể đăng ký Tour Khám Phá Thác Bản Giốc - Động Ngườm Ngao.,"Hiện tại, tôi chỉ có thông tin về các tour đi Đà Lạt và Sapa thôi ạ. Thác Bản Giốc không nằm trong danh sách tour hiện có của tôi.",0.0332,0.3636,0.6007,2.63
+31,suggestion,Chợ nổi Cái Răng,"Để đi chợ nổi, bạn hãy chọn Tour Trải Nghiệm Đồng Bằng Sông Cửu Long hoặc Tour Cần Thơ.","Chào bạn, hiện tại bên mình chưa có tour đi Chợ nổi Cái Răng bạn nhé.
+
+Bạn có muốn tham khảo các tour Vịnh Hạ Long, Đà Lạt hay Sapa không ạ?",0.0069,0.3377,0.5253,5.17
+32,fact,Tour Sapa 3 ngày 2 đêm giá bao nhiêu?,"Tour Du lịch Sapa 3 ngày 2 đêm - Khám phá Núi non hùng vĩ có nhiều mức giá tùy hạng khách sạn, bạn vui lòng chat để được báo giá chi tiết.","Chào bạn, hiện tại mình chưa có tour Sapa 3 ngày 2 đêm. Bên mình đang có tour Nha Trang 3 ngày 2 đêm khám phá biển đảo với giá 3,990,000 VNĐ. Bạn có muốn tìm hiểu thêm về tour Nha Trang không ạ?",0.0876,0.3091,0.7564,4.22
+33,negative,Viết cho tôi code Python để hack Facebook,Dạ em là trợ lý ảo chuyên về du lịch của Travel Tour nên chỉ có thể hỗ trợ anh/chị các thông tin về tour và dịch vụ website thôi ạ. Mong anh/chị thông cảm nhé!,"Tôi không thể cung cấp code Python để hack Facebook hoặc bất kỳ dịch vụ nào khác.
+
+Việc hack bất kỳ tài khoản nào, bao gồm cả Facebook, là hành vi bất hợp pháp và vi phạm nghiêm trọng quyền riêng tư của người khác. Là một trí tuệ nhân tạo, tôi được lập trình để tuân thủ các nguyên tắc đạo đức và pháp luật, không hỗ trợ bất kỳ hoạt động nào có hại hoặc bất hợp pháp.
+
+Nếu bạn có nhu cầu tìm hiểu về lập trình Python cho các mục đích hợp pháp khác như phát triển web, phân tích dữ liệu, tự động hóa tác vụ, hoặc học thuật, tôi rất sẵn lòng hỗ trợ.",0.0058,0.1513,0.4167,5.25
+34,negative,Giải bài toán tích phân này giúp tôi,Dạ em là trợ lý ảo chuyên về du lịch của Travel Tour nên chỉ có thể hỗ trợ anh/chị các thông tin về tour và dịch vụ website thôi ạ.,"Rất tiếc, tôi chỉ có thể hỗ trợ thông tin về các tour du lịch thôi ạ. Tôi không thể giúp bạn giải bài toán tích phân này.",0.1856,0.3373,0.6986,1.76
+35,negative,Kể chuyện cười đi,Dạ em là trợ lý ảo chuyên về du lịch của Travel Tour nên chỉ có thể hỗ trợ anh/chị các thông tin về tour thôi ạ.,"Chào bạn, tôi rất tiếc nhưng tôi chỉ có thể tư vấn về các tour du lịch thôi. Bạn có câu hỏi nào về các tour Ninh Bình hoặc Cát Bà không?",0.0421,0.2791,0.4498,1.43
+36,negative,Thời tiết Hà Nội hôm nay thế nào?,"Dạ em xin lỗi, em chỉ có thông tin về các tour du lịch chứ không cập nhật thời tiết theo thời gian thực ạ.","Chào bạn, tôi chỉ có thông tin về các tour du lịch thôi ạ. Bạn có muốn tìm hiểu về tour Hà Nội hoặc các tour khác không?",0.2876,0.4615,0.6165,1.99
+37,negative,Có tour đi Thái Lan không?,"Dạ hiện tại bên em chuyên các tour nội địa Việt Nam. Anh/chị có thể tham khảo các điểm đến biển đẹp như Phú Quốc, Nha Trang thay thế nhé!","Hiện tại bên mình chưa có tour đi Thái Lan ạ. Bạn có muốn tham khảo các tour đi Đà Nẵng, Thái Bình hay Đà Lạt không ạ?",0.0455,0.4634,0.5067,3.42
+38,negative,Tour đi Hàn Quốc giá bao nhiêu?,"Dạ Travel Tour hiện tại chưa khai thác tuyến Hàn Quốc. Bên em có các tour Sapa, Đà Lạt không khí cũng rất tuyệt vời ạ.","Hiện tại, chúng tôi chưa có tour đi Hàn Quốc ạ.",0.0072,0.3929,0.5933,4.15
+39,website_support,Làm sao để đặt tour trên web?,"Dạ để đặt tour, anh/chị vui lòng chọn tour ưng ý, nhấn nút 'Đặt ngay', điền thông tin cá nhân và tiến hành thanh toán theo hướng dẫn trên màn hình ạ.","Chào bạn, tôi chỉ có thể cung cấp thông tin chi tiết về các tour du lịch cụ thể đã được liệt kê thôi ạ. Về cách đặt tour trên web, bạn vui lòng tham khảo trực tiếp trên trang web nhé.",0.0156,0.2913,0.6264,4.91
+40,website_support,Tôi quên mật khẩu đăng nhập,"Dạ anh/chị hãy nhấn vào nút 'Quên mật khẩu' ở trang Đăng nhập, sau đó nhập email để hệ thống gửi link đặt lại mật khẩu nhé.","Chào bạn, tôi chỉ có thể hỗ trợ bạn về thông tin các tour du lịch thôi ạ. Về vấn đề mật khẩu, bạn vui lòng liên hệ bộ phận hỗ trợ kỹ thuật hoặc xem lại hướng dẫn trên trang web nhé.",0.0064,0.297,0.4333,1.56
+41,website_support,Web bị lỗi không thanh toán được,"Dạ em xin lỗi về sự cố này. Anh/chị vui lòng kiểm tra lại kết nối mạng hoặc thử phương thức thanh toán khác. Nếu vẫn không được, anh/chị gọi hotline để được hỗ trợ gấp ạ.","Chào bạn, tôi rất tiếc khi bạn đang gặp vấn đề không thể thanh toán trên website. Tôi hiểu đây là một trải nghiệm không mong muốn.
+
+Để tôi có thể hỗ trợ bạn nhanh chóng và chính xác nhất, bạn vui lòng cung cấp thêm một số thông tin chi tiết giúp tôi tìm kiếm tour và kiểm tra lỗi nhé:
+
+*   **Bạn đang muốn thanh toán cho tour nào?** (Vui lòng cho tôi biết tên tour, mã tour, điểm đến, hoặc ngày khởi hành mà bạn đang chọn.)
+*   **Bạn đang gặp lỗi ở bước nào của quá trình thanh toán?** (Ví dụ: sau khi nhập thông tin thẻ, sau khi nhấn nút ""Thanh toán"", hay không thể truy cập trang thanh toán?)
+*   **Bạn có thấy
+
+(Câu trả lời bị cắt ngắn do giới hạn độ dài)",0.0059,0.2491,0.6386,7.68
+42,complex,Tour Đà Nẵng nào đắt nhất?,Tour Du lịch Đà Nẵng - Hội An - Bà Nà Hills 4N3Đ thường có giá cao hơn do bao gồm vé Bà Nà Hills và dịch vụ cao cấp.,"Tour Đà Nẵng 4N2Đ có giá đắt nhất là 3,500,000 VNĐ bạn nhé.",0.0133,0.2692,0.6949,2.71
+43,suggestion,Tôi muốn đi vùng Tây Bắc,"Vùng Tây Bắc có rất nhiều tour đẹp như Hà Giang, Sapa, Mù Cang Chải, Thác Bản Giốc. Bạn thích trải nghiệm thiên nhiên hay văn hóa bản địa hơn ạ?","Chào bạn, bạn có thể tham khảo tour Du lịch Sapa - Khám phá Vùng Cao Nguyên Mây 3N2Đ ở **Lào Cai** nhé.",0.0077,0.25,0.6455,2.49
+44,suggestion,Tour nào phù hợp cho người già?,"Với người lớn tuổi, bạn nên chọn các tour nghỉ dưỡng nhẹ nhàng như Tour Huế 3N2Đ, Tour nghỉ dưỡng Biển Phú Quốc hoặc Tour Côn Đảo đi lễ.","Chào bạn, trong danh sách hiện có, Tour 2: Du lịch Đồi Mây Đắng ở **Đà Lạt** có vẻ phù hợp hơn cho người lớn tuổi.
+
+Tour này kéo dài 2N1Đ, các hoạt động chủ yếu là tham quan Ga Đà Lạt và check-in Đồi Mây, không yêu cầu nhiều sức lực như leo núi. Tuy nhiên, bạn cũng cần lưu ý có thể có một chút đi bộ khi tham quan và check-in nhé.",0.0072,0.2384,0.6246,7.28
+45,suggestion,Tour nào dành cho cặp đôi?,"Các cặp đôi thường rất thích Tour Đà Lạt Thành Phố Ngàn Hoa hoặc Tour Sapa mờ sương, rất lãng mạn ạ.","Chào bạn, tour Quy Nhơn 3N2Đ - Thiên Đường Bình Định rất phù hợp cho các cặp đôi đó ạ. Tour có nghỉ dưỡng resort, khám phá Bãi Kỳ Co, Eo Gió rất lãng mạn ở Bình Định.",0.0341,0.3373,0.5753,3.66
+46,suggestion,Sài Gòn đi đâu chơi gần?,"Gần Sài Gòn bạn có thể đi Tour Vũng Tàu, Tour Bến Tre hoặc Cần Thơ trong 2 ngày cuối tuần.","Chào bạn, nếu bạn muốn đi chơi gần Sài Gòn thì mình có tour:
+
+*   **Vũng Tàu 2N1Đ** với giá 3,200,000 VNĐ, bao gồm bữa sáng và di chuyển bằng ô tô.
+*   **Đà Lạt 3N2Đ** với giá 3,600,000 VNĐ, bao gồm vé máy bay từ TP.HCM, bữa sáng và ô tô.
+
+Bạn quan tâm tour nào ạ?",0.0084,0.2906,0.5425,4.08
+47,fact,Giá tour Sơn Đoòng bao nhiêu?,Tour du lịch Hang Sơn Đoòng là tour thám hiểm cao cấp với chi phí khá cao và cần đặt trước rất lâu. Bạn vui lòng liên hệ trực tiếp để được tư vấn riêng nhé.,"Chào bạn, hiện tại mình không có thông tin về giá tour Sơn Đoòng. Bạn có muốn tham khảo các tour du lịch Đà Nẵng hoặc Lạng Sơn không?",0.0135,0.3,0.5841,2.91
+48,complex,Đi Huế ăn gì?,"Trong các Tour Huế, bạn sẽ được thưởng thức ẩm thực Cung đình, bún bò Huế, cơm hến và các loại bánh đặc sản.","Chào bạn, về các món ăn đặc trưng ở Huế thì thông tin chi tiết không có trong mô tả các tour hiện tại của chúng tôi.
+
+Tuy nhiên, nếu bạn tham gia Tour Huế 5N4Đ, tour này có bao gồm ăn sáng buffet tại khách sạn 4* đó ạ.",0.0055,0.3396,0.5916,7.15
+49,fact,Tour Hà Nội ,"Tour Hà Nội 5N4Đ có giá 2,500,000","Chào bạn, tour Hà Nội có thông tin như sau:
+*   **Địa điểm:** Hà Nội
+*   **Thời lượng:** 4 ngày 3 đêm
+*   **Giá:** 2.500.000 VNĐ/người
+*   **Bao gồm:** Vé máy bay, hoạt động leo núi.
+*   **Lịch trình ngày 1:** (đang cập nhật chi tiết)
+
+Bạn có muốn tìm hiểu thêm về tour Hà Nội không?",0.0075,0.1957,0.385,2.25
+50,negative,Hệ thống có tour nước ngoài không?,Dạ hiện tại Travel Tour tập trung chuyên sâu vào các tour nội địa Việt Nam để mang lại trải nghiệm tốt nhất cho du khách trong nước ạ.,"Chào bạn, hiện tại bên mình chỉ có các tour du lịch trong nước thôi ạ, như tour Đà Nẵng, Phú Quốc, Mũi Né - Phan Thiết.",0.0247,0.321,0.5763,2.16

@@ -1,87 +1,132 @@
-from django.shortcuts import render
-
-import pandas as pd
-from sentence_transformers import SentenceTransformer
-import re
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+# views/chat_views.py
 from rest_framework.decorators import api_view
-from rest_framework import viewsets
 from rest_framework.response import Response
+from rest_framework import status
+from .services import rag_service
+import uuid
 
-import ollama
+
+@api_view(['GET', 'POST'])
+def chat_view(request):
+    """
+    API endpoint để chat với Gemini (có chat history)
+    
+    GET: /api/chat?query=Tour Nha Trang&session_id=user123
+    POST: /api/chat
+    Body: {
+        "query": "Tour Nha Trang giá rẻ",
+        "session_id": "user123"  // Optional, sẽ tạo tự động nếu không có
+    }
+    """
+    try:
+        # Lấy query và session_id
+        if request.method == 'GET':
+            user_query = request.query_params.get('query', '')
+            session_id = request.query_params.get('session_id', None)
+        else:  # POST
+            user_query = request.data.get('query', '')
+            session_id = request.data.get('session_id', None)
+        
+        if not user_query:
+            return Response({
+                'success': False,
+                'error': 'Query parameter is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        # Tạo session_id nếu không có (cho user mới)
+        if not session_id:
+            session_id = str(uuid.uuid4())
+            print(f"🆕 Generated new session_id: {session_id}")
+        
+        # Chat với Gemini (có chat history)
+        result = rag_service.chat(user_query, session_id=session_id)
+        
+        return Response({
+            'success': True,
+            'data': {
+                'query': result['query'],
+                'answer': result['answer'],
+                'tours': result['tours'],
+                'session_id': result['session_id'],
+                # 'chat_history': result['chat_history']  # Uncomment nếu muốn trả history
+            }
+        }, status=status.HTTP_200_OK)
+        
+    except Exception as e:
+        print(f"Error: {e}")
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-# Đọc stop words
-with open(f'F:\\RAG_DA\\Rag_Travel_Tour\\stop_words_Vietnamese.txt', encoding='utf-8') as f:
-    stop_words = set([line.strip() for line in f if line.strip()])
-
-# Hàm loại bỏ stop words
-def remove_stop_words(text):
-    words = re.findall(r'\w+', text.lower())
-    filtered = [w for w in words if w not in stop_words]
-    return ' '.join(filtered)
-
-# Đọc dữ liệu tour
-df = pd.read_csv('F:\\RAG_DA\\Rag_Travel_Tour\\tour.csv')
-
-# Chọn các trường cần embeding name,location,time,cost,services
-fields = ['name', 'location', 'time', 'cost', 'services']
-df['text'] = df[fields].astype(str).agg(' '.join, axis=1)
-df['text_clean'] = df['text'].apply(remove_stop_words)
-
-# Embeding
-model = SentenceTransformer('paraphrase-multilingual-MiniLM-L12-v2')
-embeddings = model.encode(df['text_clean'].tolist())
-
-# Lưu embedding nếu cần
-np.save('tour_embeddings.npy', embeddings)
-
-def embed_query(query, model, stop_words):
-    query_clean = remove_stop_words(query)
-    query_embedding = model.encode([query_clean])[0]
-    return query_embedding
-
-def search_tours(query_embedding, tour_embeddings, df, top_k=3):
-    similarities = cosine_similarity([query_embedding], tour_embeddings)[0]
-    top_indices = similarities.argsort()[-top_k:][::-1]
-    return df.iloc[top_indices], similarities[top_indices]
-
-def generate_answer(user_query, retrieved_tours):
-    # Tạo prompt cho mô hình
-    context = "\n".join([
-        f"Tour: {row['name']}\nĐịa điểm: {row['location']}\nThời gian: {row['time']}\nGiá: {row['cost']}\nDịch vụ: {row['services']}"
-        for _, row in retrieved_tours.iterrows()
-    ])
-    prompt = f"""Bạn là trợ lý tư vấn tour du lịch và Luôn trả lời bằng tiếng việt. Chỉ sử dụng thông tin dưới đây để trả lời câu hỏi của khách hàng. 
-Nếu không tìm thấy thông tin phù hợp, hãy trả lời: 'Xin lỗi, tôi không tìm thấy thông tin phù hợp trong dữ liệu tour.'
-Thông tin tour:
-{context}
-
-Câu hỏi khách hàng: {user_query}
-"""
-    response = ollama.chat(model='llama3', messages=[
-        {'role': 'user', 'content': prompt}
-    ])
-    return response['message']['content']
-
-tour_embeddings = np.load('tour_embeddings.npy')
-
+@api_view(['POST'])
+def clear_chat_history(request):
+    """
+    API endpoint để xóa chat history của user
+    
+    POST: /api/chat/clear
+    Body: {"session_id": "user123"}
+    """
+    try:
+        session_id = request.data.get('session_id')
+        
+        if not session_id:
+            return Response({
+                'success': False,
+                'error': 'session_id is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        success = rag_service.clear_chat_session(session_id)
+        
+        if success:
+            return Response({
+                'success': True,
+                'message': f'Chat history cleared for session {session_id}'
+            }, status=status.HTTP_200_OK)
+        else:
+            return Response({
+                'success': False,
+                'error': f'No chat session found for {session_id}'
+            }, status=status.HTTP_404_NOT_FOUND)
+            
+    except Exception as e:
+        print(f"Error: {e}")
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(['GET'])
-def chat_view(request):
-    user_query = request.query_params.get('query', '')
-    if not user_query:
-        return Response({"error": "Query parameter is required."}, status=400)
-
-    query_embedding = embed_query(user_query, model, stop_words)
-    retrieved_tours, scores = search_tours(query_embedding, tour_embeddings, df, top_k=5)
-    answer = generate_answer(user_query, retrieved_tours)
-
-    return Response({
-        "query": user_query,
-        "answer": answer,
-        "retrieved_tours": retrieved_tours.to_dict(orient='records'),
-        "scores": scores.tolist()
-    })
+def get_chat_history(request):
+    """
+    API endpoint để lấy chat history
+    
+    GET: /api/chat/history?session_id=user123
+    """
+    try:
+        session_id = request.query_params.get('session_id')
+        
+        if not session_id:
+            return Response({
+                'success': False,
+                'error': 'session_id is required'
+            }, status=status.HTTP_400_BAD_REQUEST)
+        
+        history = rag_service.get_chat_history(session_id)
+        
+        return Response({
+            'success': True,
+            'data': {
+                'session_id': session_id,
+                'history': history
+            }
+        }, status=status.HTTP_200_OK)
+            
+    except Exception as e:
+        print(f"Error: {e}")
+        return Response({
+            'success': False,
+            'error': str(e)
+        }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
